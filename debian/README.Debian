@@ -1,0 +1,17 @@
+sshfs for Debian
+----------------
+
+Please note that the simplest way to allow mounting of sshfs shares is to
+add the user to the fuse group (which will be created by the fuse-utils
+package).
+
+To add user 'foo' to the 'fuse' group type the following command (with root
+privileges):
+
+	adduser foo fuse
+
+If the user is currently logged in he/she should log out and log in order
+for this change to take effect.
+
+ -- Bartosz Fenski <fenio@debian.org>, Wed, 23 Apr 2008 16:56:10 +0200
+

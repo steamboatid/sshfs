@@ -21,3 +21,4 @@ ssh-keygen -b 1024 -t rsa -f ~/.ssh/id_rsa -P ''
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ssh -o "StrictHostKeyChecking=no" localhost echo "SSH connection succeeded"
+

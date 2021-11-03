@@ -1,0 +1,12 @@
+Reporting sshfs bugs:
+---------------------
+
+Before you submit any bugreport, please read information from 
+the following files:
+
+* /usr/share/doc/sshfs/README.Debian 
+* /usr/share/doc/sshfs/FAQ.txt.gz
+
+Most common problems and workarounds for them are described there.
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 24 Apr 2008 10:27:47 +0200

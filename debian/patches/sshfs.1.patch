@@ -1,0 +1,24 @@
+Description: Clarify that owner/group have to be numbers
+ Clarify that owner/group options have to be numbers.
+Author: Bartosz Fenski <fenio@debian.org>
+Origin: Debian
+Forwarded: not-needed
+Last-Update: 2014-01-24
+
+--- a/sshfs.1.in
++++ b/sshfs.1.in
+@@ -220,12 +220,12 @@
+ \fB\-o\fR umask=M
+ set file permissions (octal)
+ .TP
+ \fB\-o\fR uid=N
+-set file owner
++set file owner (number)
+ .TP
+ \fB\-o\fR gid=N
+-set file group
++set file group (number)
+ .TP
+ \fB\-o\fR entry_timeout=T
+ cache timeout for names (1.0s)
+ .TP

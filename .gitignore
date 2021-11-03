@@ -35,3 +35,76 @@ sshfs.1
 /m4
 .deps/
 /build
+
+
+
+
+# devs
+/*/_dev/*
+*.org
+*.old
+dkbuild.log
+*.bak
+*bak
+
+# vscode
+.vscode/*
+*.code-workspace
+
+# netbeans project
+/nbproject/*/*
+nbproject/*/*
+nbproject/*
+nbproject
+
+# debian packaging
+/debian/.debhelper/*/
+debian/.debhelper/*/
+debian/.debhelper/*
+debian/.debhelper
+
+# https://github.com/phusion/debian-packaging-for-the-modern-developer/blob/master/.gitignore
+.DS_Store
+.debhelper
+*.debhelper
+*.cache
+*.cache/*
+*.deb
+*.dsc
+*.build
+*.buildinfo
+*.changes
+*.tar.gz
+*.log
+*.substvars
+
+# Ignore generated files
+/*.deb
+/*.dsc
+/*.changes
+/*.build
+/*.buildinfo
+/*.tar.gz
+/*.tgz
+/*.bz2
+/*.zip
+
+# Ignore files generated during build
+# https://github.com/vincentbernat/pragmatic-debian-packages/blob/master/.gitignore
+debian/files
+debian/*.substvars
+debian/*.log
+debian/.debhelper/*
+debian/*.debhelper
+debian/*-stamp
+debian/*.after
+debian/*.before
+
+/*/debian/files
+/*/debian/*.substvars
+/*/debian/*.log
+/*/debian/.debhelper/*
+/*/debian/*.debhelper
+/*/debian/*-stamp
+/*/debian/*.after
+/*/debian/*.before

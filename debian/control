@@ -1,0 +1,27 @@
+Source: sshfs-fuse
+Section: utils
+Priority: optional
+Standards-Version: 4.1.5
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>
+Build-Depends: debhelper (>= 11~), libglib2.0-dev, libfuse-dev, pkg-config
+    ,meson
+    ,python3
+    ,python3-pytest
+Homepage: https://github.com/libfuse/sshfs
+Vcs-Browser: https://salsa.debian.org/debian/sshfs-fuse
+Vcs-Git: https://salsa.debian.org/debian/sshfs-fuse.git
+
+Package: sshfs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+        ,fuse [linux-any] | fuse4bsd [kfreebsd-any]
+        ,openssh-client
+Description: filesystem client based on SSH File Transfer Protocol
+ sshfs is a filesystem client based on the SSH File Transfer Protocol.
+ Since most SSH servers already support this protocol it is very easy
+ to set up: i.e. on the server side there's nothing to do.  On the
+ client side mounting the filesystem is as easy as logging into the
+ server with ssh.
+ .
+ sshfs is FUSE (Filesystem in USErspace).

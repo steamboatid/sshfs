@@ -1,0 +1,179 @@
+sshfs-fuse (2.10+repack-2) unstable; urgency=medium
+
+  * Build from correct upstream source tarball that includes FAQ,
+    README and CHANGELOG.
+  * Switched to "Meson" build system;
+    (3.x releases can only be built by Meson).
+  * Build-Depends:
+    - dh-autoreconf
+    + meson
+    + python3
+    + python3-pytest
+  * debhelper & compat to version 11.
+  * Standards-Version: 4.1.5.
+  * watch file to version 4.
+  * Vcs URLs to Salsa.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 06 Jul 2018 02:39:06 +1000
+
+sshfs-fuse (2.10-1) unstable; urgency=medium
+
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream release.
+
+ -- Bartosz Fenski <fenio@debian.org>  Fri, 04 May 2018 19:47:01 +0200
+
+sshfs-fuse (2.8-1) unstable; urgency=medium
+
+  * New upstream release [June 2016].
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 03 Jul 2016 20:10:16 +1000
+
+sshfs-fuse (2.7-1) unstable; urgency=medium
+
+  * New upstream release [March 2016].
+  * New homepage at GitHub; updated watch file.
+  * Removed obsolete "lintianisation.patch".
+  * Standards-Version: 3.9.8.
+  * Modernised Vcs URLs.
+  * dbgsym-migration: dropped "sshfs-dbg" package.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 14 Jun 2016 06:30:13 +1000
+
+sshfs-fuse (2.5-1) unstable; urgency=low
+
+  * New upstream version [January 2014].
+    + New "-o disable_hardlink" option (Closes: #670926).
+  * Standards to 3.9.5.
+  * Build using dh-autoreconf.
+  * Wrap (Build-)Depends; removed unnecessary versioned dependencies.
+  * Added VCS links.
+  * Updated my email address and copyright years.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 24 Jan 2014 11:50:44 +1100
+
+sshfs-fuse (2.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * debhelper & compat to version 9.
+  * standards to 3.9.3.
+  * unused 'autotools_dev' removed from Build-Depends.
+  * use 'aclocal' and 'autoconf' to update GNU toolchain.
+  * build with all hardening.
+  * source compression to .xz
+  * debian/copyright:
+    - format URL is updated.
+    - license text corrected.
+    - copyright years corrected.
+  * patchworks:
+    - updated sshfs.1 patch
+    - added lintianisation.patch to fix minor warning in man page.
+  * set myself as Uploader.
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Sat, 28 Apr 2012 10:29:11 +1000
+
+sshfs-fuse (2.3-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #636357)
+    - documents special handling of IPv6 addresses (Closes: #572222)
+    - corrects arguments handling (Closes: #535333, #535343, #571152)
+  * ACK NMU from 2.2-1.1 version, thanks Robert.
+  * Fixes typo in short description of -dbg package (Closes: #514261)
+  * Depends on fuse instead of fuse-utils (Closes: #629327)
+  * Clarify that owner/group options have to be numbers (Closes: #497368)
+  * Repackaged from scratch, uses DEP-5 copyrights, new debhelper,
+    Guilt format, new policy standards.
+
+ -- Bartosz Fenski <fenio@debian.org>  Sun, 08 Jan 2012 10:01:04 +0000
+
+sshfs-fuse (2.2-1.1) unstable; urgency=low
+
+   * Non-maintainer Upload.
+   * Fix installability on GNU/kFreeBSD.  (Closes: #634664)
+
+ -- Robert Millan <rmh@debian.org>  Tue, 20 Sep 2011 19:20:07 +0000
+
+sshfs-fuse (2.2-1) unstable; urgency=low
+
+  * New upstream version.
+    - allows mounting locations with , character (Closes: #502579)
+  * changes by Jelle de Jong - thanks! (Closes: #491210)
+    - Bumped Standards-Version to 3.8.0
+    - Bumped debhelper compat version
+    - Provides sshfs-debug package
+  * Mentions FUSE in description (Closes: #510369)
+
+ -- Bartosz Fenski <fenio@debian.org>  Mon, 02 Feb 2009 22:58:33 +0100
+
+sshfs-fuse (2.1-1) unstable; urgency=low
+
+  * New upstream release
+    - Fix bug in caching which could cause file corruption for append mode
+      writes; thanks to Thue Janus Kristensen for the report; (Closes: #494140)
+  * debian/watch
+    - added
+  * thanks to Sandro Tosi for preparing that upload
+
+ -- Bartosz Fenski <fenio@debian.org>  Sat, 30 Aug 2008 12:32:58 +0200
+
+sshfs-fuse (2.0-2) unstable; urgency=low
+
+  * Depends only on ssh client. (Closes: #477731)
+
+ -- Bartosz Fenski <fenio@debian.org>  Fri, 25 Apr 2008 16:54:05 +0200
+
+sshfs-fuse (2.0-1) unstable; urgency=low
+
+  * New upstream version.
+    - really allows to use other sshd options. (Closes: #430225)
+    - supports showing correct disk free information,
+      needs OpenSSH >= 5.1 (Closes: #375521, #464138)
+    - supports atomic renames, needs OpenSSH >= 4.9. (Closes: #318078, #467613)
+  * Bump needed fuse version. (Closes: #474151, #469197)
+  * Added README.Debian with description of fuse group and other requirenments
+    that have to be met to be able to use some functions. (Closes: #465916)
+  * Removed debian/sshfs.1 since it's now included upstream.
+  * Patched manpage contains information about unmounting. (Closes: #470800)
+  * Doesn't strip binaries. (Closes: #438041)
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 24 Apr 2008 10:27:47 +0200
+
+sshfs-fuse (1.9-1) unstable; urgency=low
+
+  * New upstream version (Closes: #458458)
+    - fixes problems on slower devices (Closes: #458167)
+    - allows to use other sshd options (Closes: #430225)
+  * Moved Homepage from description to header.
+  * Rewritten copyright info to make lintian happy.
+  * Fixed description for manpage.
+  * Bumped Standards-Version (no changes needed).
+  * Doesn't ignore make errors anymore.
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 22 Jan 2008 16:01:26 +0100
+
+sshfs-fuse (1.6-1) unstable; urgency=low
+
+  * New upstream release.
+    - fixes problem with saving files from GNOME apps. (Closes: #338496)
+    - adds workaround for overwriting files. (Closes: #318078, #353968)
+  * Does not suggests module that does not exist. (Closes: #334513)
+    - added README.Debian file with explanation how to get such module.
+  * README file now explains usage correctly. (Closes: #341490)
+  * Fixes typo in manual page. (Closes: #323496)
+
+ -- Bartosz Fenski <fenio@debian.org>  Fri,  3 Feb 2006 14:10:51 +0100
+
+sshfs-fuse (1.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed typo in description. (Closes: #309510)
+  * Some additions to manual page to catch up new features.
+  * Bumped Standard-Version: 3.6.2 (no changes needed).
+
+ -- Bartosz Fenski <fenio@debian.org>  Mon, 15 Aug 2005 12:40:38 +0200
+
+sshfs-fuse (1.1-1) unstable; urgency=low
+
+  * Initial Release (#294161)
+
+ -- Bartosz Fenski <fenio@debian.org>  Sat,  9 Apr 2005 12:12:46 +0200
